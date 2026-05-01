@@ -1,13 +1,15 @@
 # Aplikasi Chat Real-Time Sederhana Menggunakan Node.js dan Socket.io
 
 ### Langkah 1: Persiapan Project
-Pertama, saya membuat folder project lalu menjalankan perintah berikut di terminal:
+Pertama, pastikan node.js sudah terinstall pada perangkat, lalu membuat folder project lalu menjalankan perintah berikut di terminal:
+```
 npm init -y
 npm install express socket.io
+```
 Perintah tersebut digunakan untuk membuat project Node.js dan menginstall library yang dibutuhkan.
 
 ### Langkah 2: Membuat Server WebSocket
-Saya membuat file server.js dengan kode berikut:
+Membuat file server.js dengan kode berikut:
 ```js
 const express = require('express');
 const http = require('http');
@@ -45,7 +47,7 @@ Kode di atas berfungsi untuk:
 •	mengirim pesan ke seluruh client yang sedang terhubung
 
 ### Langkah 3: Membuat Tampilan Client
-Selanjutnya saya membuat file index.html sebagai tampilan chat sederhana.
+Selanjutnya membuat file index.html sebagai tampilan chat sederhana.
 ```html
 <!DOCTYPE html>
 <html>
@@ -92,14 +94,14 @@ Kemudian browser dibuka ke alamat:
 http://localhost:3000
 ```
 
-Setelah itu saya membuka dua tab browser secara berdampingan untuk melakukan pengujian.
+Setelah itu buka dua tab browser secara berdampingan untuk melakukan pengujian.
 
 ##
 
 ### Hasil Pengujian
 
-Saya mengetik pesan pada tab pertama, lalu pesan tersebut langsung muncul pada tab kedua tanpa perlu refresh halaman.
+Coba ketik pesan pada tab pertama, lalu pesan tersebut langsung muncul pada tab kedua tanpa perlu refresh halaman.
 Begitu juga ketika pesan dikirim dari tab kedua, tab pertama langsung menerima pesan tersebut.
 Hal ini menunjukkan bahwa koneksi WebSocket bekerja secara real-time dan bersifat full-duplex, yaitu client dan server dapat saling bertukar data dua arah secara langsung.
 
-
+<img width="4000" height="2094" alt="Image" src="https://github.com/user-attachments/assets/4f6a754c-4177-40f5-b800-c902bac77aa9" />
